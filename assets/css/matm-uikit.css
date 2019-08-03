@@ -1,0 +1,342 @@
+/*-------------------
+* MATM UI KIT css
+-------------------*/
+
+
+/*---------------------
+-- SET FONT --
+---------------------*/
+@font-face {
+	font-family: 'Oswald';
+	src: url('../font/Oswald/Oswald-Regular.woff2') format('woff2'),
+	url('../font/Oswald/Oswald-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../font/Raleway/Raleway-Regular.woff2') format('woff2'),
+	url('../font/Raleway/Raleway-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.raleway{
+	font-family: 'Raleway';
+}
+.oswald{
+	font-family: 'Oswald';
+}
+
+
+
+/*---------------------
+-- END ./ SET FONT --
+---------------------*/
+
+
+
+
+/*---------------------
+-- RESET --
+---------------------*/
+body{
+	margin: 0 auto;
+	padding: 0;
+	width: calc(100% - 2rem);
+}
+
+.card{
+	box-shadow: 3px 5px 15px rgba(0,0,0,.3);
+	transition: box-shadow .5s ease .3s;
+}
+
+.card:hover{
+	box-shadow: 3px 5px 25px rgba(0,0,0,.3);
+	transition: box-shadow .5s ease .3s;
+}
+
+.badge-shadow{
+	box-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+
+.link-finger{
+	cursor: pointer;
+}
+
+.breadcrumb li::after{
+	content: " / ";
+}
+.breadcrumb li:last-child::after{
+	content: "";
+}
+
+/*---------------------
+-- END ./ RESET --
+---------------------*/
+
+
+
+
+
+/*---------------------
+-- Content design --
+---------------------*/
+#site-container{
+	
+}
+
+.the-avatar{
+	width: 50px;
+	height: 50px;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.the-post-image{
+	width: 100%;
+	height: 350px;
+}
+
+/*---------------------
+-- END ./ Content design --
+---------------------*/
+
+
+/*---------------------
+-- Site layout design --
+---------------------*/
+.pos-absolute{
+	position: absolute;
+}
+.pos-relative{
+	position: relative;
+}
+.pos-fixed{
+	position: fixed;
+}
+.pos-sticky{
+	position: sticky;
+}
+.pos-static{
+	position: static;
+}
+
+/*---------------------
+-- END ./ Site layout design --
+---------------------*/
+
+
+
+
+/*---------------------
+-- FULL Overlay search --
+---------------------*/
+/* The Overlay (background) */
+#myNav.overlay {
+	/* Height & width depends on how you want to reveal the overlay (see JS below) */   
+	height: 100%;
+	width: 0;
+	position: fixed; /* Stay in place */
+	z-index: 2001; /* Sit on top */
+	left: 0;
+	top: 0;
+	background-color: rgb(0,0,0); /* Black fallback color */
+	background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+	overflow-x: hidden; /* Disable horizontal scroll */
+	transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+#myNav.light-overly{
+	background-color: rgb(200,200,200); /* faded/light fallback color */
+	background-color: rgba(200,200,200, 0.9); /* faded/light w/opacity */
+}
+
+/* Position the content inside the overlay */
+#myNav .overlay-content {
+	position: relative;
+	top: 25%; /* 25% from the top */
+	width: 100%; /* 100% width */
+	text-align: center; /* Centered text/links */
+	margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+#myNav.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block; /* Display block instead of inline */
+	transition: 0.3s; /* Transition effects on hover (color) */
+}
+#myNav.light-overly a{
+	color: #333;
+}
+
+/* When you mouse over the navigation links, change their color */
+#myNav.overlay a:hover, #myNav.overlay a:focus {
+	color: #f1f1f1;
+}
+#myNav.light-overly a:hover, #myNav.light-overly a:focus {
+	color: #555;
+}
+
+/* Position the close button (top right corner) */
+#myNav.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+	#myNav.overlay a {font-size: 20px}
+	#myNav.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+} 
+/*---------------------
+-- END ./ FULL Overlay search --
+---------------------*/
+
+
+
+
+
+
+/*---------------------
+-- SIDE BERGER MENU --
+---------------------*/
+/* The side navigation menu */
+#mySidenav.sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 2002; /* Stay on top */
+	top: 0;
+	right: 0;
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+#mySidenav.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 1rem;
+	display: block;
+	transition: 0.3s;
+}
+
+#mySidenav h4{
+	font-size: 1rem;
+}
+
+/* Dark style */
+#mySidenav.sidenav-dark{
+	background-color: #111; /* Black*/	
+}
+#mySidenav.sidenav-dark a{
+	color: #818181;
+}
+/* When you mouse over the navigation links, change their color */
+#mySidenav.sidenav-dark a:hover {
+	color: #f1f1f1;
+}
+
+/* Light style */
+#mySidenav.sidenav-light{
+	background-color: #f1f1f1; /* Black*/	
+}
+#mySidenav.sidenav-light a{
+	color: #333;
+}
+/* When you mouse over the navigation links, change their color */
+#mySidenav.sidenav-light a:hover {
+	color: #555;
+}
+
+/* Position and style the close button (top right corner) */
+#mySidenav.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+	transition: margin-right .5s;
+	padding: 20px;
+} 
+/* #main can be on body :)  */
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	#mySidenav.sidenav {padding-top: 15px;}
+	#mySidenav.sidenav a {font-size: 18px;}
+} 
+/*---------------------
+-- END ./ SIDE BERGER MENU --
+---------------------*/
+
+
+
+/*---------------------
+-- Charts --
+---------------------*/
+.sample-chart-height *{
+	
+}
+canvas {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.chart-holder{
+	display: block;
+	position: relative;
+}
+
+.chart-holder canvas.the-canvas-normal {
+	display: block;
+	margin: 10px auto;
+	padding: 5px;
+}
+
+.height-200{
+	height: 200px;
+	max-height: 200px;
+}
+
+
+
+/*---------------------
+-- END ./ Charts --
+---------------------*/
+
+
+
+
+/*---------------------
+--  404 --
+---------------------*/
+.bg-404{
+	background-image: url('../media/image/mono/silhouette-3141264.png');
+	background-size: cover;
+	/*top: 50;*/
+	/*position: relative;*/
+}
+
+.bg-404 .card-body{
+	background-color: rgba(200,200,200,.9);
+}
+/*---------------------
+-- END ./ 404 --
+---------------------*/

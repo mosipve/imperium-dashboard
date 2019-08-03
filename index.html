@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="description" content="MAtm Dashboard">
+  <meta name="keywords" content="HTML,CSS,JavaScript,Dashboard,Jquery,Chart">
+  <meta name="author" content="MAtm">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="assets/font/fontawesome-free-5.7.1-web/css/all.min.css">
+  <link rel="stylesheet" href="assets/font/material-design-iconic-font/css/material-design-iconic-font.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  
+  <!-- ********************************************************** 
+  CUSTOM STYLE DESIGN 
+    [
+    set this on for see new ui/ux. 
+    important to show off normal(disable or remove) bootstrap css
+    ]
+    found more in: assets/css/bs-custom-full/...
+    ********************************************************** -->
+    <!-- <link rel="stylesheet" href="assets/css/bs-custom-full/keyout/bootstrap.min.css"> -->
+
+  <!-- **********************************************************
+  CUSTOM STYLE DESIGN [DARK MODE]
+    [
+    set this on for see new ui/ux. 
+    important to show off normal(disable or remove) bootstrap css
+    ]
+    found more in: assets/css/bs-custom-full/...
+    ********************************************************** -->
+  <!-- 
+    <link rel="stylesheet" href="assets/css/bs-custom-full/night/bootstrap.min.css">
+  -->
+  <!-- OR more Dark -->
+  <!-- 
+    <link rel="stylesheet" href="assets/css/bs-custom-full/dark/bootstrap.min.css">
+  -->
+
+  <!-- Custom ui/ux -->
+  <link rel="stylesheet" href="assets/css/waves.min.css">
+  <link rel="stylesheet" href="assets/css/matm-uikit.css">
+
+
+
+  <title>Dashboard > Home</title>
+</head>
+<body class="raleway"> <!-- Web Fonts [attached]: raleway - oswald -->
+  <div id="site-container" class="row">
+    <!-- ===================================== -->
+
+
+
+    <!-- use: sticky-top , fixed-top -->
+    <header class="bg-light p-3 border rounded-bottom shadow d-block sticky-top col-sm-12 col-lg-12">
+
+      <nav class="navbar navbar-expand-md navbar-light bg-light"> 
+        <!-- left overly menu -->
+        <span class="nav-item mr-5">
+          <a onclick="openNav()">&nbsp;<i class="fa fa-grip-vertical ml-3 waves-effect"></i>&nbsp;</a>
+        </span>
+        <!-- site name/brand -->
+        <a class="navbar-brand waves-effect text-muted" href="#">
+          <i class="fab fa-maxcdn fa-3x"></i>
+          <i class="fab fa-artstation fa-2x"></i>
+          <i class="fab fa-tumblr fa-2x"></i>
+          <i class="fab fa-maxcdn fa-3x"></i>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- collapse in mobile & full width on other -->
+        <div class="collapse navbar-collapse nav" id="navbarsTop">
+          <ul class="navbar-nav mr-auto small" role="menu">
+
+            <li class="nav-item dropdown ml-3">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown_First" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-settings"></i></a>
+              <div class="dropdown-menu shadow" aria-labelledby="dropdown_First">
+                <div class="dropdown-header"><i class="zmdi zmdi-settings"></i></i>&nbsp; &rsaquo; Setting</div>
+                <div class="dropdown-divider"></div> 
+                <a class="dropdown-item waves-effect" href="#"><i class="zmdi zmdi-account-box-o"></i>&nbsp; Admin Login </a>
+                <a class="dropdown-item waves-effect" href="#"><i class="zmdi zmdi-account-box"></i>&nbsp; User Login</a>
+                <a class="dropdown-item waves-effect" href="#"><i class="zmdi zmdi-account-add"></i>&nbsp; Register</a>
+                <a class="dropdown-item waves-effect" href="#"><i class="zmdi zmdi-mood-bad"></i>&nbsp; Forget Password</a>
+                <a class="dropdown-item waves-effect" href="#"><i class="zmdi zmdi-accounts-outline"></i>&nbsp; Change Password</a>
+                <a class="dropdown-item waves-effect" href="#"><i class="zmdi zmdi-zoom-in"></i>&nbsp; View Website</a>
+                <a class="dropdown-item waves-effect" href="#"><i class="zmdi zmdi-power-setting"></i>&nbsp; Logout</a>
+              </div>
+            </li>
+
+          </ul>
+          <!-- right side berger menu -->
+          <div class="form-inline ml-5">
+           <span onclick="openTNav()">&nbsp;<i class="fa fa-grip-vertical mr-3 waves-effect"></i>&nbsp;</span>
+         </div>
+
+       </div>
+
+     </nav>
+     <!-- end navbar -->
+
+   </header>
+
+
+   <main class="col-sm-12 p-5">
+
+    <div class=" row">
+
+      <h1 class="display-4 waves-effect text-center mb-5 col-12 text-muted">
+        Dashboard 
+        <span class="fa-layers fa-fw">
+          <i class="fas fa-bookmark"></i>
+          <span class="fa-layers-counter text-danger text-light">Home</span>
+        </span>
+      </h1>
+
+      <div class="col-sm-12 col-lg-8 p-5">
+
+        <div class="card rounded text-muted">
+          <div class="small mb-3 card-header">
+            <ul class="nav">
+              <li class="nav-item dropdown align-self-start">
+                <a class="text-muted nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bars"></i></a>
+                <div class="dropdown-menu shadow">
+                  <a class="dropdown-item" href="#">Dashboard</a>
+                  <a class="dropdown-item" href="#">Print</a>
+                  <a class="dropdown-item" href="#">Send as Mail</a>
+                </div>
+              </li> 
+              <li class="nav-item">
+                <div class="align-items-center">
+                  <h2 class="card-title">Sales Statistics </h2>
+                </div>
+              </li> 
+              <li class="nav-item">
+                <div class="align-items-center justify-content-start">
+                  <p class="card-subtitle">
+                   Vestibulum purus quam scelerisque, mollis nonummy metus
+                 </p>
+               </div>
+             </li>                 
+           </ul> 
+         </div>
+
+         <div class="col-12 card-img chart-holder">
+          <canvas id="myBarChart" width="500" height="100"></canvas>
+        </div>
+        <div class="card-footer small text-muted">
+          <p>in 5:15 &dash; 25June 2018</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-lg-4 p-5">
+
+      <section class="card">
+        <div class="card-img chart-holder border">
+          <canvas id="myLineChart" width="500" height="100"></canvas>
+        </div>
+      </section>
+
+      <div class="card mt-3">
+        <div class="card-block card-body">
+          <h4 class="card-title text-center text-muted">Card title</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a href="#" class="btn btn-link text-muted">2016 Visitor 
+              &nbsp; <small class="badge badge-pill badge-primary badge-shadow">1700</small>
+            </a> 
+          </li>
+          <li class="list-group-item">
+            <a href="#" class="btn btn-link text-muted">2017 Visitor 
+              &nbsp; <small class="badge badge-pill badge-primary badge-shadow">1300</small>
+            </a> 
+          </li>
+          <li class="list-group-item">
+            <a href="#" class="btn btn-link text-muted">2018 Visitor 
+              &nbsp; <small class="badge badge-pill badge-primary badge-shadow">1100</small>
+            </a> 
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+    <div class="col-sm-12 col-lg-4 p-5">
+      <div class="card text-center text-muted">
+        <h4 class="card-title">orders</h4>
+        <div class="card-body">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:70%"></div>
+          </div> 
+        </div>
+        <div class="card-footer">
+          70% send - 30% on warehouse
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="col-sm-12 col-lg-4 p-5">
+      <div class="card text-center text-muted">
+        <h4 class="card-title">yearly sales</h4>
+        <div class="card-body">
+         <div class="progress">
+          <div class="progress-bar bg-success" style="width:50%">
+            finished 50%
+          </div>
+          <div class="progress-bar bg-warning text-dark" style="width:20%">
+            warehouse 20%
+          </div>
+          <div class="progress-bar bg-danger" style="width:30%">
+            not complete 30%
+          </div>
+        </div>  
+      </div>
+      <div class="card-footer">
+        <a href="#" class="card-link text-info">see more</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-12 col-lg-4 p-5">
+    <div class="card text-center text-muted card-inverse">
+      <h4 class="card-title">cpu task</h4>
+      <div class="card-body">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger text-left pl-2" style="width:70%">70% (cpu usage is work)</div>
+        </div> 
+      </div>
+      <div class="card-footer">
+        70% cpu used
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">
+      <div class="card-block table-inverse">
+        <table class="table table-striped table-hover justify-content-center align-self-stretch mx-auto w-100">
+          <thead class="thead-default bg-secondary text-light">
+            <tr>
+              <th>#</th>
+              <th>Lorem</th>
+              <th>Ipsum</th>
+              <th>Dolor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>cell 1</td>
+              <td>cell 2</td>
+              <td>cell 3</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cell 4</td>
+              <td>cell 5</td>
+              <td>cell 6</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>cell 7</td>
+              <td>cell 8</td>
+              <td>cell 9</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">
+      <div class="card-block table-inverse">
+        <table class="table table-striped table-hover justify-content-center align-self-stretch mx-auto w-100">
+          <thead class="thead-default">
+            <tr>
+              <th>#</th>
+              <th>Lorem</th>
+              <th>Ipsum</th>
+              <th>Dolor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>cell 1</td>
+              <td>cell 2</td>
+              <td>cell 3</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cell 4</td>
+              <td>cell 5</td>
+              <td>cell 6</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>cell 7</td>
+              <td>cell 8</td>
+              <td>cell 9</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">          
+      <div class="text-center card-header bg-light text-muted">
+        <h2 class="card-title">Sales Statistics </h2>
+      </div>
+      <div class="card-img chart-holder py-3">
+        <canvas id="myPieChart" width="500" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">          
+      <div class="text-center card-header bg-light text-muted">
+        <h2 class="card-title">Sales Statistics </h2>
+      </div>
+      <div class="card-img chart-holder py-3">
+        <canvas id="myRadarChart" width="500" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">          
+      <div class="text-center card-header bg-light text-muted">
+        <h2 class="card-title">Sales Statistics </h2>
+      </div>
+      <div class="card-img chart-holder py-3">
+        <canvas id="myDoughnutChart" width="500" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">          
+      <div class="text-center card-header bg-light text-muted">
+        <h2 class="card-title">Sales Statistics </h2>
+      </div>
+      <div class="card-img chart-holder py-3">
+        <canvas id="myPolarChart" width="500" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">
+
+      <div class="card-header">
+        <div class="card-title text-center">
+          Messages
+        </div>
+      </div>
+
+      <div class="card-body small">
+        <ul class="list-unstyled">
+          <li class="mb-2"><a class="text-dark" href="#">
+            <div class="media">
+              <div class="mr-2">
+                <img class="the-avatar rounded shadow" src="assets/media/image/mono/businessman-310819.png" alt="">
+              </div>
+              <div class="media-body">
+                <div class="text-info">David Belle</div>
+                <small class="small">Cum sociis natoque penatibus et magnis dis parturient montes</small>
+              </div>
+            </div>
+          </a></li>
+          <li class="mb-2"><a class="text-dark" href="#">
+            <div class="media">
+              <div class="mr-2">
+                <img class="the-avatar rounded shadow" src="assets/media/image/mono/female-296990.png" alt="">
+              </div>
+              <div class="media-body">
+                <div class="text-info">Jonathan Morris</div>
+                <small class="small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+              </div>
+            </div>
+          </a></li>
+          <li class="mb-2"><a class="text-dark" href="#">
+            <div class="media">
+              <div class="mr-2">
+                <img class="the-avatar rounded shadow" src="assets/media/image/mono/teacher-295387.png" alt="">
+              </div>
+              <div class="media-body">
+                <div class="text-info">Fredric Mitchell Jr.</div>
+                <small class="small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+              </div>
+            </div>
+          </a></li>
+          <li class="mb-2"><a class="text-dark" href="#">
+            <div class="media">
+              <div class="mr-2">
+                <img class="the-avatar rounded shadow" src="assets/media/image/mono/user-310807.png" alt="">
+              </div>
+              <div class="media-body">
+                <div class="text-info">Glenn Jecobs</div>
+                <small class="small">Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</small>
+              </div>
+            </div>
+          </a></li>
+          <li class="mb-2"><a class="text-dark" href="#">
+            <div class="media">
+              <div class="mr-2">
+                <img class="the-avatar rounded shadow" src="assets/media/image/mono/avatar-159236.png" alt="">
+              </div>
+              <div class="media-body">
+                <div class="text-info">Bill Phillips</div>
+                <small class="small">Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</small>
+              </div>
+            </div>
+          </a></li>
+        </ul>
+
+      </div>
+
+      <div class="card-footer text-center">
+        <a class="text-muted" href="#">View All</a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="col-sm-12 col-lg-6 p-5">
+    <div class="card">
+      <div class="card-header bg-light text-muted clearfix">
+        <div class="float-left">
+          <h4 class="card-title">title</h4>
+          <p class="small">post by <a href="#" class="text-muted">Auther</a> &mdash; on 25June 2018</p>
+        </div>
+        <div class="float-right">
+          <div class="dropdown open dropleft">
+            <a class="text-muted py-2 px-3 waves-effect rounded-circle" type="button" id="carddropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="zmdi zmdi-more-vert"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="carddropdownMenu1">
+              <a class="dropdown-item" href="#"><i class="fa fa-edit"></i>&nbsp;Edit</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-file-export"></i>&nbsp;Repost</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-share"></i>&nbsp;Share</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-comment-slash"></i>&nbsp;Report</a>
+              <a class="dropdown-item" href="#"><i class="far fa-comment-alt"></i>&nbsp;Reply</a>
+              <a class="dropdown-item" href="#"><i class="far fa-copy"></i>&nbsp;Copy Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-12 my-5"><hr></div>
+  <div class="col-sm-12">
+    <div class="card bg-warning">
+      <div class="card-header">
+        <h4 class="card-title">Change Theme</h4>
+      </div>
+      <div class="card-body">
+       <div class="card-text">
+
+        <div class="bg-dark text-light p-3 my-3 rounded">
+          <h5 class="font-weight-bold">CUSTOM STYLE DESIGN</h5> 
+         
+         <h6 class="text-danger">
+          <i class="fa fa-info mr-2 text-warning"></i> important 
+         </h6>
+         <p>
+          [<br>
+          for looking another ui/ux , make sure 
+          to show off normal (disable) bootstrap css
+          <br>]
+        </p>
+        <p class="small">
+          You can finding more in: assets/css/bs-custom-full/...
+        </p>
+        <p>
+          <b>Base Dashboard in</b>: < link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        </p>
+      </div>
+      <div class="card-block my-3">
+       <h6 class="font-weight-bold">For Secondary Light Dashboard Mode</h6>
+       <p class="pl-5">
+        < link rel="stylesheet" href="assets/css/bs-custom-full/keyout/bootstrap.min.css"> 
+      </p>
+      <h6 class="font-weight-bold">For Dark Dashboard Mode</h6>
+      <p class="pl-5">
+        < link rel="stylesheet" href="assets/css/bs-custom-full/night/bootstrap.min.css">
+
+      </p>
+      <h6 class="font-weight-bold">For Secondary Dark Dashboard</h6>
+      <p class="pl-5">
+        < link rel="stylesheet" href="assets/css/bs-custom-full/dark/bootstrap.min.css">
+
+      </p>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+</div> <!-- end row -->
+
+
+
+</main>
+
+
+
+
+
+<!-- ------------------------------- -->
+<!-- init footer -->
+<!-- ------------------------------- -->
+<footer class="container-fluid bg-light text-muted text-center p-5 mt-5">
+  <p class="col-12">admin dashboard footer</p>
+  <ul class="list-inline small">
+    <li class="list-inline-item"><a href="#" class="text-muted waves-effect">Home</a></li>
+    <li class="list-inline-item"><a href="#" class="text-muted waves-effect">Dashboard</a></li>
+    <li class="list-inline-item"><a href="#" class="text-muted waves-effect">Reports</a></li>
+    <li class="list-inline-item"><a href="#" class="text-muted waves-effect">Support</a></li>
+    <li class="list-inline-item"><a href="#" class="text-muted waves-effect">Contact</a></li>
+  </ul>
+</footer>
+<!-- ------------------------------- -->
+<!-- END ./ init footer -->
+<!-- ------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------------------------- -->
+<!-- init sidebar menus -->
+<!-- ------------------------------- -->
+<!-- The overlay [full width overlyed menu] -->
+<!-- add {light-overly} after {overly}class for see light them => class="overlay light-overly" -->
+<div id="myNav" class="overlay overly">
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn waves-effect" onclick="closeNav()">&times;</a>
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <form class="row" action="">
+      <div class="input-group mb-3 col-8 offset-2 pull-2">
+        <input type="text" class="form-control" placeholder="search here ...">
+        <div class="input-group-prepend">
+          <span class="input-group-btn">
+            <button class="btn btn-outline-secondary">
+              <i class="fab fa-sistrix"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- sidebar moved in menu [in this case on the right] -->
+  <!-- sidenav-light OR sidenav-dark -->
+  <div id="mySidenav" class="sidenav sidenav-dark">
+    <ul class="list-unstyled">
+      <li>
+        <a href="index.html" class="waves-effect"><i class="far fa-bookmark"></i>&nbsp; Dashboard</a>
+      </li>
+      <li>
+        <a href="chat.html" class="waves-effect"><i class="fa fa-portrait"></i>&nbsp; Chat</a>
+      </li>
+      <li>
+        <a href="recents.html" class="waves-effect"><i class="fa fa-layer-group"></i>&nbsp; Recents</a>
+      </li>
+      <li>
+       <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="">
+          <div class="" role="tab" id="headingMenuOne">
+            <h4 class="">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseMenuUI" aria-expanded="true" aria-controls="collapseMenuUI">
+               <i class="fa fa-laptop"></i>&nbsp; UI Elements <i class="minuser"><span class="fa fa-minus fa-xs fa-pull-right"></span></i>
+             </a>
+           </h4>
+         </div>
+         <div id="collapseMenuUI" class="collapsing collapse in" role="tabpanel" aria-labelledby="headingMenuOne">
+          <ul class="list-unstyled custom-control">
+            <li><a href="button.html" class="waves-effect">Button</a></li>
+            <li><a href="cards.html" class="waves-effect">Cards</a></li>
+            <li><a href="charts.html" class="waves-effect">Charts</a></li>
+            <li><a href="progressbar.html" class="waves-effect">Progress bar</a></li>
+            <li><a href="spinner.html" class="waves-effect">Spinners</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+   <div id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="">
+      <div class="" role="tab" id="headingMenuOne">
+        <h4 class="">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseMenuPages" aria-expanded="true" aria-controls="collapseMenuPages">
+           <i class="fab fa-product-hunt"></i>&nbsp; Pages <i class="minuser"><span class="fa fa-minus fa-xs fa-pull-right"></span></i>
+         </a>
+       </h4>
+     </div>
+     <div id="collapseMenuPages" class="collapsing collapse in" role="tabpanel" aria-labelledby="headingMenuOne">
+      <ul class="list-unstyled custom-control">
+        <li><a href="single.html" class="waves-effect">Normal</a></li>
+        <li><a href="singlsideleft.html" class="waves-effect">Sidebar Left</a></li>
+        <li><a href="singlsideright.html" class="waves-effect">Sidebar Right</a></li>
+        <li><a href="about.html" class="waves-effect">About</a></li>
+        <li><a href="contact.html" class="waves-effect">Contact</a></li>
+        <li><a href="404.html" class="waves-effect">404</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+ <div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="">
+    <div class="" role="tab" id="headingMenuOne">
+      <h4 class="">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseMenuIcons" aria-expanded="true" aria-controls="collapseMenuIcons" class="">
+         <i class="fa fa-sign"></i>&nbsp; Icons <i class="minuser"><span class="fa fa-minus fa-xs fa-pull-right"></span></i>
+       </a>
+     </h4>
+   </div>
+   <div id="collapseMenuIcons" class="collapsing collapse in" role="tabpanel" aria-labelledby="headingMenuOne">
+    <ul class="list-unstyled custom-control">
+      <li><a href="icons-fa.html" class="waves-effect">Font Awesome</a></li>
+      <li><a href="icons-material.html" class="waves-effect">Material Design</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+</li>
+<li><a href="contact.html" class="waves-effect"><i class="fa fa-phone"></i>&nbsp; Contact</a></li>
+</ul>
+<a href="javascript:void(0)" class="closebtn waves-effect" onclick="closeTNav()">&times;</a>
+</div>
+<!-- ------------------------------- -->
+<!-- END ./ init sidebar menus -->
+<!-- ------------------------------- -->
+
+
+
+
+</div> <!-- END ./ SITE CONTAINER -->
+<!-- ===================================== -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+<script src="assets/js/popper.min.js?v=2018"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript --> 
+<!-- CHARTS  -->
+<script src="assets/js/my-chart-js/chart.js/Chart.min.js"></script>  
+<script src="assets/js/my-chart-js/init-charts.js"></script>  
+<!-- wave js -->
+<script src="assets/js/waves.min.js"></script>
+<!-- font awesome -->
+<script src="assets/font/fontawesome-free-5.7.1-web/js/all.min.js"></script>
+<!-- init all js -->
+<script src="assets/js/init.js?ver=2019" type="text/javascript"></script>
+</body>
+</html>
